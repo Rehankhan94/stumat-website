@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="STUMAT develops smart PHBV films with bio-based additives and microencapsulated Spirulina for food contact materials.">
+  <title>STUMAT | Smart materials for food packaging</title>
+  <style>
+    :root {
+      --ink: #12332f;
+      --green: #146b5b;
+      --mint: #d8eee3;
+      --lime: #d8ed8c;
+      --cream: #f7f8ef;
+      --muted: #52645d;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    header { background: #fff; border-bottom: 1px solid #e3e9de; }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 0; }
+    .brand { font-size: 1.35rem; font-weight: 900; letter-spacing: .08em; text-decoration: none; }
+    .brand span { color: var(--green); }
+    nav { display: flex; flex-wrap: wrap; gap: 24px; }
+    nav a { font-size: .9rem; font-weight: 700; text-decoration: none; }
+    nav a:hover, a:hover { color: var(--green); }
+    .hero { overflow: hidden; background: var(--ink); color: white; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; padding: 100px 0; }
+    .eyebrow { display: inline-block; margin: 0 0 18px; color: var(--lime); font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(3rem, 7vw, 6rem); line-height: .98; letter-spacing: -.055em; }
+    .hero p { max-width: 650px; margin: 28px 0; color: #d8e9de; font-size: 1.15rem; }
+    .button { display: inline-block; padding: 13px 22px; border-radius: 100px; background: var(--lime); color: var(--ink); font-weight: 800; text-decoration: none; }
+    .button:hover { background: white; color: var(--ink); }
+    .art { position: relative; min-height: 360px; border-radius: 35px; background: radial-gradient(circle at 75% 20%, #77bb9c, #237864 48%, #17493f 80%); overflow: hidden; }
+    .film { position: absolute; width: 72%; height: 220px; left: 14%; top: 65px; border: 2px solid #e2f7c2; border-radius: 28px; background: rgba(204, 246, 205, .18); transform: rotate(-12deg); box-shadow: 18px 22px 0 rgba(200, 236, 179, .16), 36px 44px 0 rgba(200, 236, 179, .12); }
+    .dot { position: absolute; width: 44px; height: 44px; border-radius: 50%; background: #c4eb9a; box-shadow: inset -8px -8px 0 rgba(11, 92, 74, .25); }
+    .d1 { top: 65px; left: 55px; } .d2 { top: 135px; left: 160px; width: 60px; height: 60px; } .d3 { top: 40px; right: 45px; }
+    .art-label { position: absolute; bottom: 20px; left: 24px; right: 24px; padding: 12px 17px; border-radius: 14px; background: rgba(16, 50, 43, .75); font-size: .83rem; letter-spacing: .03em; }
+    section { padding: 88px 0; }
+    .section-label { color: var(--green); font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h2 { max-width: 780px; margin: 12px 0 25px; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.13; letter-spacing: -.035em; }
+    .intro { max-width: 780px; color: var(--muted); font-size: 1.12rem; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 42px; }
+    .card { min-height: 250px; padding: 30px; border: 1px solid #dfebdf; border-radius: 22px; background: white; }
+    .number { color: var(--green); font-weight: 900; }
+    h3 { margin: 22px 0 10px; font-size: 1.35rem; line-height: 1.2; }
+    .card p { color: var(--muted); margin: 0; }
+    .band { background: var(--mint); }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
+    .facts { display: grid; gap: 12px; }
+    .fact { padding: 17px 0; border-bottom: 1px solid #b9d5c4; }
+    .fact strong { display: block; }
+    .fact span { color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .outline { display: inline-block; padding: 11px 18px; border: 1px solid var(--green); border-radius: 100px; color: var(--green); font-weight: 800; text-decoration: none; }
+    .outline:hover { background: var(--green); color: white; }
+    footer { padding: 38px 0; background: var(--ink); color: #d8e9de; font-size: .88rem; }
+    footer a { color: white; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      nav { gap: 14px; }
+      .hero-grid, .split { grid-template-columns: 1fr; gap: 36px; }
+      .hero-grid { padding: 70px 0; }
+      .art { min-height: 300px; }
+      .cards { grid-template-columns: 1fr; }
+      section { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">STU<span>MAT</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#project">Project details</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Marie Skłodowska-Curie Actions · 2026–2028</span>
+          <h1>Materials for a smarter food future.</h1>
+          <p><strong>STUMAT</strong> explores bio-based PHBV films and Spirulina-derived colour indicators for the next generation of food contact materials.</p>
+          <a class="button" href="#about">Explore the project ↓</a>
+        </div>
+        <div class="art" role="img" aria-label="Concept illustration of a translucent film containing green indicator beads">
+          <div class="film">
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+          </div>
+          <div class="art-label">BIO-BASED FILMS × RESPONSIVE INDICATORS</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <span class="section-label">The idea</span>
+        <h2>Can food packaging do more with less?</h2>
+        <p class="intro">PHBV is a promising bio-based polymer, but its mechanical performance can limit its use in food packaging. STUMAT aims to tune PHBV films with ferulic-acid-derived additives and explore colour-changing Spirulina extracts as indicators of food spoilage.</p>
+      </div>
+    </section>
+
+    <section id="research" class="band">
+      <div class="wrap">
+        <span class="section-label">Research approach</span>
+        <h2>From molecules to smart films</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="number">01 / DESIGN</span>
+            <h3>Improve PHBV</h3>
+            <p>Develop bio-based additives and study how they interact with PHBV to tune film properties.</p>
+          </article>
+          <article class="card">
+            <span class="number">02 / ENCAPSULATE</span>
+            <h3>Protect the indicator</h3>
+            <p>Use droplet millifluidics to encapsulate Spirulina-derived extracts in alginate microbeads.</p>
+          </article>
+          <article class="card">
+            <span class="number">03 / TEST</span>
+            <h3>Explore food applications</h3>
+            <p>Integrate these components into films and investigate their potential for spoilage detection.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="wrap split">
+        <div>
+          <span class="section-label">The project</span>
+          <h2>STUMAT</h2>
+          <p class="intro">Development of Smart PHBV films with microencapsulated spirulina as TUnable food contact MATerials.</p>
+          <div class="links">
+            <a class="outline" href="https://cordis.europa.eu/project/id/101203141" target="_blank" rel="noopener noreferrer">View on CORDIS ↗</a>
+          </div>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>Researcher</strong><span>Dr. Muhammad Rehan Khan</span></div>
+          <div class="fact"><strong>Host organisation</strong><span>AgroParisTech Innovation, France</span></div>
+          <div class="fact"><strong>Partner organisation</strong><span>INRAE, France</span></div>
+          <div class="fact"><strong>Programme</strong><span>Horizon Europe · Marie Skłodowska-Curie Actions</span></div>
+          <div class="fact"><strong>Grant agreement</strong><span>101203141 · 4 May 2026 – 3 May 2028</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      STUMAT is funded by the European Union under grant agreement No. 101203141.
+      Project information: <a href="https://cordis.europa.eu/project/id/101203141">CORDIS</a>.
+    </div>
+  </footer>
+</body>
+</html>
